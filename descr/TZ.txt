@@ -1,0 +1,22 @@
+mehrumst: MegaLZ, Hrum and Hrust.
+command name - mhmt (MeHruMsT)
+
+parameters:
+-mlz, -hrm, -hst - use megalz, hrum or hrust format (default is megalz)
+-g - greedy coding (default is optimal coding)
+-d - depacking instead of packing (default is packing)
+
+-zxh - add zx-specific header for hrum or hrust. DEFAULT is NO HEADER! Not applicable for megalz.
+       if -zxh is specified, -16, NO -bend and NO -mlz is forced
+-8, -16 - bitstream is in bytes or words in packed file. Default for megalz is -8, for hrum and hrust is -16
+-bend - if -16 specified, this makes 16bit words big-endian. default is little-endian
+
+-maxwinN - maximum lookback window. N is decimal number, which can only be 256,512,1024,2048,4096,8192,16384 or 32768.
+           default is format-specific maximum window: megalz is 4352, hrum is 4096, hrust is 65536.
+           for given format, window can be only DECREASED
+
+usage:
+mhmt [parameters] <input filename> [<output filename>]
+
+if no output filename, for packing is added .mlz, .hrm or .hst (in accordance with format chosen), for depacking .dpk is added
+
