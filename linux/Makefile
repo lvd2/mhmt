@@ -4,7 +4,7 @@ OBJECTS         = mhmt-emit.o mhmt-globals.o mhmt-hash.o mhmt-lz.o mhmt-main.o m
 SRCS            = mhmt-emit.s mhmt-globals.s mhmt-hash.s mhmt-lz.s mhmt-main.s mhmt-optimal.s mhmt-pack.s mhmt-parsearg.s mhmt-tb.s mhmt-depack.s
 
 #CFLAGS          = -m32 -march=i386 -std=c99 -O2 -flto -fomit-frame-pointer -Wunused-variable -Wextra -Werror -pedantic-errors -g -D_POSIX_C_SOURCE=1 -U__STRICT_ANSI__ 
-CFLAGS          = -march=k8 -std=c99 -O2 -flto -fomit-frame-pointer -Wunused-variable -Wextra -Werror -pedantic-errors -g -D_POSIX_C_SOURCE=1 -U__STRICT_ANSI__
+CFLAGS          = -march=k8 -std=c99 -O2 -flto -fomit-frame-pointer -Wunused-variable -Wextra -Werror -pedantic-errors -g -D_POSIX_C_SOURCE=1 -U__STRICT_ANSI__ -Wno-shift-negative-value
 
 #switch the compiler (for the internal make rules)
 CC              = gcc
